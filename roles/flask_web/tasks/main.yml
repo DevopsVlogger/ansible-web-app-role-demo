@@ -1,1 +1,14 @@
 #task file for flask_web role
+   - name: install python dependencies
+     pip: name={{ item }} state=present
+     with_items:
+       - flask
+       - flask-mysql
+       - MySQL-Python
+
+   - name: copy source code file app.py
+     copy: src=app.py dest=/opt/app.py
+
+
+   - name: start webserver
+     shell: FLASK_APP=/opt/app.py nohup flask run --host=0.0.0.0 &
