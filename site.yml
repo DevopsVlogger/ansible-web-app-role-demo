@@ -1,0 +1,6 @@
+- name: Deploy a Web Application
+  hosts: ubuntu-docker-1
+  roles:
+    - python
+    - mysql_db
+    - flask_web
