@@ -1,0 +1,11 @@
+[docker-host]
+ubuntu-docker-1
+
+[test_linux_ubuntu]
+ubutnu-server1
+[test_linux_centos]
+centos7-server1
+
+[test_linux:children]
+test_linux_ubuntu
+test_linux_centos
