@@ -1,0 +1,7 @@
+---
+db_name: employee_db
+db_user: db_user
+db_pass: Passw0rd
+ansible_host: 192.168.56.107
+ansible_user: root
+ansible_python_interpreter: /usr/bin/python
